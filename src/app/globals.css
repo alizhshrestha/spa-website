@@ -30,7 +30,7 @@
 }
 
 .menu-links{
-  @apply text-[var(--color-accent)] hover:text-[var(--color-primary)] hover:shadow-xs hover:underline transition-all duration-200;
+  @apply text-[var(--color-accent)] hover:text-[var(--color-secondary)] transition-all duration-200;
 }
 
 @media (prefers-color-scheme: light) {

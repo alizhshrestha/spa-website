@@ -2,6 +2,7 @@
 
 import { Service } from "@/constants/service";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 type ServiceCardProps = {
     service: Service;
@@ -13,9 +14,11 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             whileHover={{ scale: 1.03 }}
             className="flex flex-col bg-[var(--color-surface)] shadow-lg rounded-lg overflow-hidden transition-transform"
         >
-            <img
+            <Image
                 src={service.image}
                 alt={service.name}
+                width={200}
+                height={200}
                 className="h-48 w-full object-cover"
             />
             <div className="flex flex-col flex-1 p-4">

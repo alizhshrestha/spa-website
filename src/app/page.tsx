@@ -1,13 +1,17 @@
+import AboutHeroSection from "@/components/sections/AboutHeroSection";
 import HeroSection from "@/components/sections/HeroSection";
-import NavBar from "@/components/sections/NavBar";
+import OurStorySection from "@/components/sections/OurStorySection";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 
 export default function Home() {
   return (
     <main>
-      <NavBar />
       <HeroSection />
       <ServiceGrid />
+      <section id="about" className="mt-10">
+        <AboutHeroSection />
+        <OurStorySection />
+      </section>
     </main>
   );
 }
