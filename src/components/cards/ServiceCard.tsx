@@ -9,7 +9,7 @@ type ServiceCardProps = {
 
 export default function ServiceCard({ service }: ServiceCardProps) {
     return (
-        <Link href={`/services/${service.id}`} className="block h-full">
+        <Link href={`/service-detail/${service.id}`} className="block h-full">
             <motion.div
                 whileHover={{ scale: 1.03 }}
                 className="flex flex-col h-full bg-[var(--color-surface)] shadow-lg rounded-lg overflow-hidden transition-transform cursor-pointer"

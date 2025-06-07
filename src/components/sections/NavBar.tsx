@@ -26,7 +26,13 @@ export default function NavBar() {
                     >
                         About
                     </Link>
-                    <a href="#services" className="menu-links">Services</a>
+                    {/* <a href="#services" className="menu-links">Services</a> */}
+                    <Link
+                        href={"/services"}
+                        className="menu-links"
+                    >
+                        Services
+                    </Link>
                     <a href="#booking" className="menu-links">Booking</a>
                     <Link
                         href={"/contact"}

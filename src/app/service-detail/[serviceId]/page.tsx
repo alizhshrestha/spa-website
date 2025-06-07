@@ -1,4 +1,3 @@
-
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,7 +17,7 @@ export default async function ServiceDetailPage({
   }
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-16">
+    <section className="max-w-5xl mx-auto px-4 py-16 mt-16">
       <h1 className="text-4xl font-bold text-[var(--color-primary)] mb-6">{service.name}</h1>
       <Image
         src={service.image}

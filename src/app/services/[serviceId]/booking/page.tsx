@@ -60,7 +60,7 @@ export default function BookingPage({
                 setSuccess(true);
 
                 // Construct WhatsApp link
-                const whatsappNumber = 'YOUR_CLIENT_WHATSAPP_NUMBER_WITH_COUNTRY_CODE'; // Example: '9779812345678'
+                const whatsappNumber = '9779840268792'; // Example: '9779812345678'
                 const message = encodeURIComponent(
                     `Hello, I would like to book *${service.name}*.\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nMessage: ${formData.message}`
                 );

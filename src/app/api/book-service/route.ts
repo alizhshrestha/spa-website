@@ -1,5 +1,5 @@
 // app/api/book-service/route.ts
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const { serviceName, name, phone, email, message } = body;
 
     // TODO: Replace this with actual email sending logic
-    console.log('Booking request received:');
+    console.log("Booking request received:");
     console.log(`Service: ${serviceName}`);
     console.log(`Name: ${name}`);
     console.log(`Phone: ${phone}`);
@@ -19,7 +19,10 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error processing booking:', error);
-    return NextResponse.json({ success: false, error: 'Internal server error' }, { status: 500 });
+    console.error("Error processing booking:", error);
+    return NextResponse.json(
+      { success: false, error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
