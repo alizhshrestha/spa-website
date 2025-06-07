@@ -28,7 +28,12 @@ export default function NavBar() {
                     </Link>
                     <a href="#services" className="menu-links">Services</a>
                     <a href="#booking" className="menu-links">Booking</a>
-                    <a href="#contact" className="menu-links">Contact</a>
+                    <Link
+                        href={"/contact"}
+                        className="menu-links"
+                    >
+                        Contact
+                    </Link>
                 </div>
             </div>
         </nav>
