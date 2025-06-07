@@ -1,5 +1,3 @@
-'use client';
-
 import { Service } from "@/constants/service";
 import { motion } from 'framer-motion';
 import Image from "next/image";
