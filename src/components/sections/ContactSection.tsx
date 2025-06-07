@@ -27,7 +27,7 @@ export default function ContactSection() {
             {/* Social Links */}
             <div className="flex justify-center gap-6 text-2xl text-[var(--color-primary)]">
                 <Link
-                    href="https://www.instagram.com/YOUR_INSTAGRAM"
+                    href="https://www.instagram.com/himalayanhealinghands"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
