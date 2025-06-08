@@ -11,7 +11,7 @@ export default function ServiceGrid({isServicePage}:{isServicePage: boolean}) {
 
     return (
         <section id="services" className="py-16 bg-[var(--color-background)] mt-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 cursor-pointer">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl font-extrabold text-center text-[var(--color-foreground)] mb-12">
                     Our Services
                 </h2>

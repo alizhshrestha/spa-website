@@ -44,13 +44,13 @@ export default function ServiceCard({ service }: ServiceCardProps) {
 
         <div className="flex space-x-2 mt-auto">
           <Link
-            href={`/services/${service.id}`}
+            href={`/service-detail/${service.id}`}
             className="flex-1 px-4 py-2 text-center bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition-colors text-sm"
           >
             Show Details
           </Link>
           <Link
-            href={`/booking?serviceId=${service.id}`}
+            href={`/services/${service.id}/booking`}
             className="flex-1 px-4 py-2 text-center bg-[var(--color-primary)] text-white rounded-full hover:bg-amber-600 transition-colors text-sm"
           >
             Book Now
