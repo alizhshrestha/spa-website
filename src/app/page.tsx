@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <ServiceGrid />
+      <ServiceGrid isServicePage={false} />
       <section id="about" className="mt-10">
         <AboutHeroSection />
         <OurStorySection />

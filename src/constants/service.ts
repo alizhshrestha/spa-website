@@ -1,116 +1,160 @@
 export interface Service {
-    id: string;
-    name: string;
-    description: string;
-    benefits: string[];
-    duration: number;
-    price: number;
-    category: 'massage' | 'facial' | 'body' | 'specialty';
-    featured: boolean;
-    image: string;
-    popular?: boolean;
+  id: string;
+  name: string;
+  description: string;
+  benefits: string[];
+  options: {
+    duration: number; // in minutes
+    price: number; // price for this option
+  }[];
+  category: string;
+  featured: boolean;
+  popular?: boolean;
+  image: string;
+}
+
+
+export const services: Service[] = [
+  {
+    id: 'prenatal-therapy',
+    name: 'Prenatal Therapy',
+    description: 'A specialized massage designed to alleviate physical discomfort and reduce stress for expectant mothers. Helps improve circulation, relieve muscle tension, and promote overall well-being for both mother and baby.',
+    benefits: [
+      'Reduces stress and anxiety',
+      'Eases muscle and joint pain',
+      'Improves circulation',
+      'Promotes better sleep and relaxation'
+    ],
+    options: [
+      { duration: 60, price: 275 }
+    ],
+    category: 'specialty',
+    featured: true,
+    image: '/images/services/prenatal-therapy.jpg'
+  },
+  {
+    id: 'deep-tissue-massage',
+    name: 'Deep Tissue Massage',
+    description: 'A targeted massage using deep pressure to release chronic muscle tension and break up scar tissue. Ideal for treating strains, sports injuries, and postural imbalances.',
+    benefits: [
+      'Breaks down scar tissue',
+      'Relieves deep muscle tension',
+      'Enhances flexibility and range of motion',
+      'Promotes muscle recovery'
+    ],
+    options: [
+      { duration: 60, price: 285 },
+      { duration: 90, price: 375 }
+    ],
+    category: 'massage',
+    featured: true,
+    image: '/images/services/deep-tissue.jpg'
+  },
+  {
+    id: 'lymphatic-drainage',
+    name: 'Lymphatic Drainage Massage',
+    description: 'A gentle, rhythmic massage technique that stimulates the lymphatic system, aiding in detoxification, reducing fluid retention, and boosting immune function.',
+    benefits: [
+      'Stimulates lymph flow and detoxification',
+      'Reduces swelling and water retention',
+      'Strengthens immune system',
+      'Promotes relaxation and well-being'
+    ],
+    options: [
+      { duration: 60, price: 275 },
+      { duration: 90, price: 375 }
+    ],
+    category: 'massage',
+    featured: true,
+    image: '/images/services/lymphatic-drainage.jpg'
+  },
+  {
+    id: 'swedish-massage',
+    name: 'Swedish Massage',
+    description: 'A classic full-body massage designed to promote relaxation, ease muscle tension, and improve circulation using long, gliding strokes.',
+    benefits: [
+      'Reduces stress and promotes relaxation',
+      'Relieves muscle tension',
+      'Improves blood circulation',
+      'Boosts overall wellness'
+    ],
+    options: [
+      { duration: 60, price: 275 },
+      { duration: 90, price: 375 }
+    ],
+    category: 'massage',
+    featured: true,
+    image: '/images/services/swedish-massage.jpg'
+  },
+  {
+    id: 'four-hands-holistic',
+    name: 'Four Hands Holistic Massage',
+    description: 'An indulgent massage performed by two synchronized therapists using perfectly coordinated movements to double the relaxation and stress relief.',
+    benefits: [
+      'Deepens relaxation experience',
+      'Balances both sides of the body',
+      'Eases muscle tension and inflammation',
+      'Enhances sensory awareness and harmony'
+    ],
+    options: [
+      { duration: 60, price: 499 },
+      { duration: 90, price: 739 }
+    ],
+    category: 'specialty',
+    featured: true,
+    image: '/images/services/four-hands-holistic.jpg'
+  },
+  {
+    id: 'foot-reflexology',
+    name: 'Foot Reflexology',
+    description: 'A therapeutic massage applying precise pressure to reflex points on the feet to stimulate organ function and promote overall health.',
+    benefits: [
+      'Stimulates organ function through reflex points',
+      'Improves circulation',
+      'Relieves foot pain and fatigue',
+      'Enhances relaxation and body balance'
+    ],
+    options: [
+      { duration: 75, price: 270 }
+    ],
+    category: 'massage',
+    featured: true,
+    image: '/images/services/foot-reflexology.jpg'
+  },
+  {
+    id: 'cellulite-treatment',
+    name: 'Cellulite Treatment',
+    description: 'A specialized massage targeting problem areas to reduce cellulite, improve circulation, and eliminate water retention for smoother skin.',
+    benefits: [
+      'Reduces cellulite appearance',
+      'Eliminates water retention',
+      'Improves blood circulation',
+      'Detoxifies and firms the skin'
+    ],
+    options: [
+      { duration: 60, price: 285 },
+      { duration: 90, price: 375 }
+    ],
+    category: 'body',
+    featured: true,
+    image: '/images/services/cellulite-treatment.jpg'
+  },
+  {
+    id: 'sports-massage',
+    name: 'Sports Massage',
+    description: 'A performance-focused massage to enhance circulation, improve flexibility, and relieve muscle tension. Ideal for athletes and active individuals.',
+    benefits: [
+      'Enhances circulation',
+      'Improves muscle flexibility',
+      'Reduces muscle tension and soreness',
+      'Helps prevent injuries'
+    ],
+    options: [
+      { duration: 60, price: 285 },
+      { duration: 90, price: 369 }
+    ],
+    category: 'massage',
+    featured: true,
+    image: '/images/services/sports-massage.jpg'
   }
-  
-  export const services: Service[] = [
-    {
-      id: 'hot-stone-massage',
-      name: 'Hot Stone Massage',
-      description: 'A deeply relaxing massage using smooth, heated stones to melt away tension and improve circulation. The warmth of the stones penetrates deep into muscles for ultimate relaxation.',
-      benefits: [
-        'Relieves chronic muscle tension',
-        'Improves blood circulation',
-        'Reduces stress and anxiety',
-        'Promotes deeper relaxation'
-      ],
-      duration: 90,
-      price: 120,
-      category: 'massage',
-      featured: true,
-      popular: true,
-      image: '/images/hot-stone.jpg'
-    },
-    {
-      id: 'deep-tissue',
-      name: 'Deep Tissue Massage',
-      description: 'A therapeutic massage focusing on the deeper layers of muscle and connective tissue. Ideal for chronic aches and pains or rehabilitation from injuries.',
-      benefits: [
-        'Breaks down scar tissue',
-        'Relieves muscle tension',
-        'Improves range of motion',
-        'Helps with chronic pain'
-      ],
-      duration: 60,
-      price: 85,
-      category: 'massage',
-      featured: true,
-      image: '/images/deep-tissue.jpg'
-    },
-    {
-      id: 'signature-facial',
-      name: 'Signature Rejuvenating Facial',
-      description: 'Our most popular facial treatment combining cleansing, exfoliation, extraction, hydration, and massage with premium skincare products tailored to your skin type.',
-      benefits: [
-        'Deeply cleanses pores',
-        'Improves skin texture',
-        'Boosts collagen production',
-        'Hydrates and nourishes skin'
-      ],
-      duration: 75,
-      price: 95,
-      category: 'facial',
-      featured: true,
-      popular: true,
-      image: '/images/signature-facial.jpg'
-    },
-    {
-      id: 'detox-body-wrap',
-      name: 'Detoxifying Body Wrap',
-      description: 'A full-body treatment that combines exfoliation with a mineral-rich mask to detoxify, hydrate, and firm the skin while promoting relaxation.',
-      benefits: [
-        'Draws out toxins',
-        'Improves skin elasticity',
-        'Reduces appearance of cellulite',
-        'Promotes lymphatic drainage'
-      ],
-      duration: 60,
-      price: 110,
-      category: 'body',
-      featured: true,
-      image: '/images/body-wrap.jpg'
-    },
-    {
-      id: 'couples-massage',
-      name: 'Couples Massage',
-      description: 'Enjoy side-by-side massages in our private couples suite. Choose from Swedish, Deep Tissue, or Hot Stone techniques for a shared relaxing experience.',
-      benefits: [
-        'Shared relaxation experience',
-        'Customizable pressure and style',
-        'Private treatment room',
-        'Promotes bonding and connection'
-      ],
-      duration: 60,
-      price: 180,
-      category: 'specialty',
-      featured: true,
-      image: '/images/couples-massage.jpg'
-    },
-    {
-      id: 'aromatherapy',
-      name: 'Aromatherapy Massage',
-      description: 'A Swedish massage enhanced with essential oils selected for your specific needs (relaxation, energy, immune support, etc.). Combines physical and emotional benefits.',
-      benefits: [
-        'Enhances mood and emotional well-being',
-        'Customizable oil blends',
-        'Reduces stress and fatigue',
-        'Boosts immune function'
-      ],
-      duration: 50,
-      price: 75,
-      category: 'massage',
-      featured: true,
-      image: '/images/aromatherapy.jpg'
-    }
-  ];
-  
-  // Helper array for featured services
-  export const featuredServices = services.filter(service => service.featured);
+];
