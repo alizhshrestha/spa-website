@@ -1,0 +1,1 @@
+export const whatsappNumber : string = '9779840268792';
