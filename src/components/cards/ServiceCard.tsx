@@ -32,10 +32,19 @@ export default function ServiceCard({ service }: ServiceCardProps) {
                             <li key={index}>{benefit}</li>
                         ))}
                     </ul>
-                    <div className="mt-auto">
-                        <span className="inline-block w-full text-center px-4 py-2 bg-[var(--color-primary)] text-white rounded-full hover:bg-amber-600 transition-colors">
-                            View Details
-                        </span>
+
+                    {/* Action Buttons */}
+                    <div className="flex space-x-2 mt-auto">
+                        <Link
+                            href={`/services/${service.id}`}
+                            className="flex-1 text-center px-4 py-2 border border-[var(--color-primary)] text-[var(--color-primary)] rounded-full hover:bg-[var(--color-primary)] hover:text-white transition-colors"
+                        >Show Details</Link>
+                        <Link
+                            href={`/services/${service.id}/booking`}
+                            className="flex-1 text-center px-4 py-2 bg-[var(--color-primary)] text-white rounded-full hover:bg-amber-600 transition-colors"
+                        >
+                            Book Now
+                        </Link>
                     </div>
                 </div>
             </motion.div>

@@ -41,7 +41,7 @@ export default function HeroSection() {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Link
-                                href='/booking'
+                                href='/services'
                                 className="inline bg-amber-500 hover:bg-amber-600 text-amber-900 font-medium px-8 py-4 rounded-full text-lg shadow-lg transition-all duration-300 hover:shadow-xl dark:bg-amber-400 dark:hover:bg-amber-300"
                             >
                                 Book Your Experience
