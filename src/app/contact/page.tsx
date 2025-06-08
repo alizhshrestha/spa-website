@@ -1,5 +1,6 @@
 'use client'
 
+import { facebookLink, instagramLink, whatsappLink } from "@/constants/contact";
 import Link from "next/link";
 import { useState } from "react"
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
@@ -95,7 +96,7 @@ export default function ContactPage() {
             {/* Social & WhatsApp */}
             <div className="mt-12 text-center space-y-4">
                 <Link
-                    href="https://wa.me/971501234567"
+                    href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-6 py-3 bg-amber-500 text-white font-bold rounded-full hover:bg-amber-600 transition-colors"
@@ -105,7 +106,7 @@ export default function ContactPage() {
                 </Link>
                 <div className="flex justify-center gap-6 text-2xl mt-6 text-[var(--color-primary)]">
                     <Link
-                        href="https://www.instagram.com/YOUR_INSTAGRAM"
+                        href={instagramLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
@@ -114,7 +115,7 @@ export default function ContactPage() {
                         <FaInstagram />
                     </Link>
                     <Link
-                        href="https://www.facebook.com/YOUR_FACEBOOK"
+                        href={facebookLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Facebook"

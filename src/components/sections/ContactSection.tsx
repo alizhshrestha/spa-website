@@ -1,5 +1,6 @@
 'use client'
 
+import { facebookLink, instagramLink, whatsappLink } from "@/constants/contact"
 import Link from "next/link"
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
 
@@ -14,7 +15,7 @@ export default function ContactSection() {
             {/* WhatsApp Button */}
             <div className="mb-8">
                 <Link
-                    href='https://wa.me/971501234567'
+                    href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-6 py-3 bg-amber-500 text-white font-bold rounded-full hover:bg-amber-600 transition-colors"
@@ -27,20 +28,20 @@ export default function ContactSection() {
             {/* Social Links */}
             <div className="flex justify-center gap-6 text-2xl text-[var(--color-primary)]">
                 <Link
-                    href="https://www.instagram.com/himalayanhealinghands"
+                    href={instagramLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="hover:text-amber-500 transition-colors"
+                    className="hover:text-[var(--color-accent)] transition-colors"
                 >
                     <FaInstagram />
                 </Link>
                 <Link
-                    href="https://www.facebook.com/YOUR_FACEBOOK"
+                    href={facebookLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
-                    className="hover:text-amber-500 transition-colors"
+                    className="hover:text-[var(--color-accent)] transition-colors"
                 >
                     <FaFacebook />
                 </Link>
@@ -49,12 +50,12 @@ export default function ContactSection() {
             {/* Email */}
             <p className="mt-8 text-[var(--color-foreground)]">
                 Or email us at:{' '}
-                <a
+                <Link
                     href="mailto:hello@example.com"
-                    className="text-[var(--color-primary)] font-medium hover:underline"
+                    className="text-[var(--color-primary)] font-medium hover:text-[var(--color-accent)] hover:underline "
                 >
                     hello@example.com
-                </a>
+                </Link>
             </p>
         </section>
     )
